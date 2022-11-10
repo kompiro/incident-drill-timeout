@@ -1,6 +1,6 @@
 {
-	"name": "",
-	"image": "mcr.microsoft.com/devcontainers/ruby:3.1-bullseye",
+	"name": "incident-drill-timeout",
+	"build": { "dockerfile": "Dockerfile" },
 	"features": {
 		"ghcr.io/devcontainers/features/node:1": {
 			"version": "lts"
@@ -10,10 +10,10 @@
 	},
 	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [3000, 4567],
+	"forwardPorts": [3000],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo gem update --system",
+	// "postCreateCommand": "ruby --version",
 
 	// Configure tool-specific properties.
 	"customizations": {
