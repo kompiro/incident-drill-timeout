@@ -10,13 +10,27 @@
 	},
 	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [3000, 4567]
+	"forwardPorts": [3000, 4567],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "ruby --version",
+	"postCreateCommand": "sudo gem update --system",
 
 	// Configure tool-specific properties.
-	// "customizations": {},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"rebornix.ruby",
+				"ms-azuretools.vscode-docker",
+				"eamodio.gitlens"
+			],
+
+			"settings": {
+				"ruby.lint": {
+					"rubocop": false
+				}
+			}
+		}
+	},
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
