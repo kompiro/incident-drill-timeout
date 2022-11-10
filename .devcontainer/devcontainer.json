@@ -1,6 +1,9 @@
 {
 	"name": "incident-drill-timeout",
-	"build": { "dockerfile": "Dockerfile" },
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "development",
+	"workspaceFolder": "/workspace",
+	"shutdownAction": "stopCompose",
 	"features": {
 		"ghcr.io/devcontainers/features/node:1": {
 			"version": "lts"
@@ -12,9 +15,9 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [3000],
 
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "ruby --version",
-
+	// Use 'postStartCommand' to run commands after the container is created.
+  "postStartCommand": "bundle install",
+  "waitFor": "postStartCommand",
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
