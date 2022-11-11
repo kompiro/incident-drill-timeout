@@ -1,0 +1,9 @@
+@startuml
+
+component "MainService(Rails)" as main
+component "AccidentService(Sinatra)" as accident
+
+Client -> main
+main -> accident
+
+@enduml

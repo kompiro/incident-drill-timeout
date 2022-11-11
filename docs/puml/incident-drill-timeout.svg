@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="68px" preserveAspectRatio="none" style="width:482px;height:68px;background:#FFFFFF;" version="1.1" viewBox="0 0 482 68" width="482px" zoomAndPan="magnify"><defs/><g><!--MD5=[53ccf4b3ee6cf4337a0ab93ac09644f3]
+entity main--><g id="elem_main"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="164" x="69.5" y="7"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="213.5" y="12"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="211.5" y="14"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="211.5" y="18"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="84.5" y="39.9951">MainService(Rails)</text></g><!--MD5=[e34b7e6076988fa53af5fe6cff1c0a17]
+entity accident--><g id="elem_accident"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="207" x="269" y="7"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="456" y="12"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="454" y="14"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="454" y="18"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="167" x="284" y="39.9951">AccidentService(Sinatra)</text></g><!--MD5=[0ba5ee7700168656dc1b457c6fe9fdac]
+entity Client--><g id="elem_Client"><ellipse cx="25.5" cy="30" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="6" y="59.9951">Client</text></g><!--MD5=[0349a65763ec46414fa731c045f293c5]
+link Client to main--><g id="link_Client_main"><path d="M34.85,30 C44.68,30 54.51,30 64.34,30 " fill="none" id="Client-to-main" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="69.48,30,60.48,26,64.48,30,60.48,34,69.48,30" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4e42c0a101a6d588e84d38667d4c6f7e]
+link main to accident--><g id="link_main_accident"><path d="M233.51,30 C243.53,30 253.55,30 263.56,30 " fill="none" id="main-to-accident" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="268.8,30,259.8,26,263.8,30,259.8,34,268.8,30" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[014065bf4aa8f5482acfe5d8286df23e]
+@startuml
+
+component "MainService(Rails)" as main
+component "AccidentService(Sinatra)" as accident
+
+Client -> main
+main -> accident
+
+@enduml
+
+PlantUML version 1.2022.12(Sun Oct 23 18:12:26 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
