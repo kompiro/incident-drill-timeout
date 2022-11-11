@@ -12,8 +12,11 @@ services:
       # 'workspaceFolder' in '.devcontainer/devcontainer.json' so VS Code starts here.
       - ..:/workspace:cached
 
-  accident-service:
-    image: accident-service
+  accident:
+    image: accident
     build:
       context: accident-service
       dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 4567:4567
