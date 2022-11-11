@@ -9,6 +9,12 @@
 
 ## 必要な環境
 
+### a. GitHub Codespaces
+
+このリポジトリを clone 後、Code ボタンから Codespaces を開いてください。
+
+### b. その他の環境
+
 - VSCode
   - VSCode Dev Containers Extension
   - VSCode Remote SSH Extension を組み合わせる場合の注意点
@@ -21,23 +27,26 @@
     - Dev Containers がサポートするのは docker compose V2 のみ
     - **python版のdocker-composeはサポートされていません**
 
-## 使い方
+#### 立ち上げ方
 
 1. このリポジトリを clone する
 2. VSCode Dev Containers で開く
     - 自動でコンテナのビルド、Extensions のインストール、 bundle install を行います。
     - 数分かかるのでコーヒーを飲んで待ちましょう。
-3. VSCode が起動したらターミナルを開き、下記のプロセスを立ち上げます
+
+## 使い方
+
+1. VSCode が起動したらターミナルを開き、下記のプロセスを立ち上げます
     - `bundle ex rails s`: メインのサービスを起動
-4. 下記のようのPORTSタブを開いてください。
+2. 下記のようのPORTSタブを開いてください。
     ![PORTS Tab](/docs/images/port.png)
     - Local Addressに書かれているアドレスをブラウザで開くことを確認してください。この例では http://localhost:3001 です。
     - Rails へリクエストが到達することと、ブラウザでRailsのログが開くことを確認してください。
     - VSCode Docker Extension がコンテナ内で立ち上がったサービスを検知し、自動で Port Forwarding を行います。
-5. もう一つTERMINALを開きましょう。
+3. もう一つTERMINALを開きましょう。
     ![TERMINAL Tab](/docs/images/terminal.png)
 
-6. この環境には [hey](https://github.com/rakyll/hey) というHTTPリクエストベンチを導入しています。新しく作成したTERMINALで `hey -n 4 -c 2 http://localhost:3000/posts` とコマンドを起動後、ブラウザで先程開いたURLを再表示してください。**ブラウザは60secほど読み込み中の表示になるはずです。**
+4. この環境には [hey](https://github.com/rakyll/hey) というHTTPリクエストベンチを導入しています。新しく作成したTERMINALで `hey -n 4 -c 2 http://localhost:3000/posts` とコマンドを起動後、ブラウザで先程開いたURLを再表示してください。**ブラウザは60secほど読み込み中の表示になるはずです。**
 
 ### なにがおきているのか？
 
