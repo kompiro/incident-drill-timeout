@@ -11,30 +11,35 @@
 		"ghcr.io/devcontainers/features/docker-in-docker:1": {},
 		"ghcr.io/devcontainers/features/github-cli:1": {}
 	},
-	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [3000],
-
+	"forwardPorts": [
+		3000
+	],
 	// Use 'postStartCommand' to run commands after the container is created.
-  "postStartCommand": "bundle install",
-  "waitFor": "postStartCommand",
+	"postStartCommand": "bundle install",
+	"waitFor": "postStartCommand",
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"rebornix.ruby",
 				"ms-azuretools.vscode-docker",
-				"eamodio.gitlens"
+				"eamodio.gitlens",
+				"jebbs.plantuml",
+				"bierner.github-markdown-preview"
 			],
-
 			"settings": {
+				"editor.tabSize": 4,
 				"ruby.lint": {
 					"rubocop": false
-				}
+				},
+				"plantuml.server": "http://plantuml:8080",
+				"plantuml.render": "PlantUMLServer",
+				"plantuml.exportOutDir": "docs",
+				"plantuml.exportFormat": "svg"
 			}
 		}
 	},
-
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
