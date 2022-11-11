@@ -1,5 +1,5 @@
 class ReadyController < ApplicationController
   def index
-    head :no_content
+    render plain: "OK\n"
   end
 end

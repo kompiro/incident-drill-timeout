@@ -1,0 +1,3 @@
+SERVICE_TIMEOUT = ENV['SERVICE_TIMEOUT']
+timeout = Integer(SERVICE_TIMEOUT) rescue nil if SERVICE_TIMEOUT.present?
+TIMEOUT = timeout
