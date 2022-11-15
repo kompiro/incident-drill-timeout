@@ -30,6 +30,7 @@
 			],
 			"settings": {
 				"editor.tabSize": 4,
+				"terminal.integrated.gpuAcceleration": "off",
 				"ruby.lint": {
 					"rubocop": false
 				},
